@@ -226,7 +226,7 @@ export default function Scanner({ onBack }) {
       formData.append("file", imageBlob, "captured_leaf.jpg");
 
       // 3. Send Request to FastAPI
-      const res = await fetch("http://127.0.0.1:8000/predict", {
+      const res = await fetch("https://leafify-backend-qoxu.onrender.com/predict", {
         method: "POST",
         body: formData, // No 'Content-Type' header needed; fetch sets it automatically for FormData
       });
